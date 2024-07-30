@@ -39,6 +39,7 @@ function onSubmit(event) {
           'Sorry, there are no images matching your search query. Please try again.',
           parameters
         );
+        loadMore.classList.add('hidden');
       } else {
         Notify.info(`Hooray! We found ${data.totalHits} images.`, parameters);
         createImage(results);
