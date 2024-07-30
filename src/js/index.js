@@ -12,7 +12,7 @@ const parameters = {
   fontSize: '30px',
 };
 
-const perPage = 25;
+const perPage = 50;
 let page = 1;
 let searchingKey = '';
 
@@ -56,7 +56,7 @@ function onSubmit(event) {
 }
 
 function clickLoadMore() {
-  page += 1;
+  page++;
   fetchPhoto(searchingKey, page, perPage)
     .then(data => {
       const results = data.hits;
